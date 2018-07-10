@@ -15,7 +15,7 @@ var musicList = [
 	{
 		name : 'RealHardstyle',
 		author : 'rhr.fm',
-		src : 'http://stream2.rhr.fm/',
+		src : 'http://stream1.rhr.fm:8326/stream',
 		cover : 'http://rhr.fm/data/img/menuhead.png'
 	},
 	{
