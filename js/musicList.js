@@ -3,7 +3,7 @@ var musicList = [
 	{
 		name: 'Q-Dance',
 		author: 'q-dance.com',
-		src: 'http://19993.live.streamtheworld.com/Q_DANCEAAC.aac',
+		src: 'https://18973.live.streamtheworld.com/Q_DANCE.mp3?tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=none&sbmid=96e2b266-4fd4-4f62-809e-c2d50649dff7',
 		cover: 'http://pic.58pic.com/58pic/15/08/86/49D58PICHuN_1024.png'
     },
 	{
