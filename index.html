@@ -159,11 +159,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                1
+                2
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                1
+                2
                 <span>标签</span>
             </div>
         </div>
@@ -227,6 +227,148 @@
 
             
             <section id="main">
+    <article id="post-如何为Cadence的原理图重新编号" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/11/09/如何为Cadence的原理图重新编号/">如何为Cadence的原理图重新编号</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/11/09/如何为Cadence的原理图重新编号/">
+            <time datetime="2018-11-09T08:47:00.000Z" itemprop="datePublished">2018-11-09</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Cadence/">Cadence</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="如何为Cadence的原理图重新编号"><a href="#如何为Cadence的原理图重新编号" class="headerlink" title="如何为Cadence的原理图重新编号"></a>如何为Cadence的原理图重新编号</h1><p>大家做电子工程师，原理图的绘制相信很多已经模块化，经常直接copy，但是会面临元件标号不连续的现象。 </p>
+<p>​    现在怎么做呢？</p>
+<p>​    假如一个原理图的一部分如下，晶振两个谐振电容为c99和c100，</p>
+<p><img src="http://uphotos.eepw.com.cn/ICELOLLY/pics/7d3d412c723665e77b24d39f7e6e8348.jpg" alt=""></p>
+<p>选择工程文件，点击tools </p>
+<p><img src="http://uphotos.eepw.com.cn/ICELOLLY/pics/242f40367c02b37150a1de43351480df.jpg" alt=""></p>
+<p>选择reset to ？ </p>
+<p><img src="http://uphotos.eepw.com.cn/ICELOLLY/pics/b8da830fa16c6193f7da6b2158f34458.jpg" alt=""></p>
+<p>查看原理图文件编号 </p>
+<p><img src="http://uphotos.eepw.com.cn/ICELOLLY/pics/1fdeb8e9f16b7a71d0ee994fdb117222.jpg" alt=""></p>
+<p>再次选择tools–annatate，选择如下：</p>
+<p><img src="http://uphotos.eepw.com.cn/ICELOLLY/pics/10fe483d74925f8336497c1925ed95d3.jpg" alt=""></p>
+<p>最后结果如下： </p>
+<p><img src="http://uphotos.eepw.com.cn/ICELOLLY/pics/77604fbd78e0b814df22d6d21cffec44.jpg" alt=""></p>
+<p>结束！</p>
+<p>测试16.5 17.2均可以。</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://blog.785v.com/2018/11/09/如何为Cadence的原理图重新编号/" data-id="cjoh61a5h0000d8u225422500" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://blog.785v.com/2018/11/09/如何为Cadence的原理图重新编号/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://blog.785v.com/2018/11/09/如何为Cadence的原理图重新编号/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-Markdown-语法说明" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -776,7 +918,7 @@ _   底线
 
 </div>
 
-    <a data-url="https://blog.785v.com/2017/08/24/Markdown-语法说明/" data-id="cjk92uhye0000x0u2l4fyu920" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://blog.785v.com/2017/08/24/Markdown-语法说明/" data-id="cjoh61a6t0006d8u2r1wl0gtz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -867,6 +1009,25 @@ _   底线
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/11/09/如何为Cadence的原理图重新编号/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/11/09/如何为Cadence的原理图重新编号/" class="title">如何为Cadence的原理图重新编号</a></p>
+                            <p class="item-date"><time datetime="2018-11-09T08:47:00.000Z" itemprop="datePublished">2018-11-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2017/08/24/Markdown-语法说明/" class="thumbnail">
     
     
@@ -894,7 +1055,7 @@ _   底线
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -903,7 +1064,7 @@ _   底线
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cadence/">Cadence</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -912,7 +1073,7 @@ _   底线
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a>
+            <a href="/tags/Cadence/" style="font-size: 10px;">Cadence</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a>
         </div>
     </div>
 
